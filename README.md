@@ -128,9 +128,8 @@ Response:
 
 ```plaintext
 unified_embeddings/
-├── unified_embeddings/
-│   ├── requirements.txt     # Dependencies
-│   ├── embedding_models.py  # FastAPI app & registry
+├── requirements.txt         # Dependencies
+├── embedding_models.py      # FastAPI app & registry
 ├── Dockerfile               # Container build
 ├── .dockerignore            # Ignore files in Docker build
 ├── LICENSE                  # MIT license
