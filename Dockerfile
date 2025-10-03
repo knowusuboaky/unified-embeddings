@@ -33,9 +33,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /app
 
-# Copy app files relative to the build context (repo root)
-COPY embedding_models.py /app/embedding_models.py
-COPY unified-embeddings/requirements.txt /app/requirements.txt
+# Copy app files
+COPY unified_embeddings/requirements.txt /app/requirements.txt
+COPY unified_embeddings/embedding_models.py /app/embedding_models.py
 
 # ---- Python deps ----
 ARG TORCH_INDEX_URL=
