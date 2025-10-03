@@ -10,7 +10,7 @@ It handles model-specific quirks (prefixes, pooling, normalization) and works on
 * 🔎 **Unified interface** for multiple models (E5, MXBAI, Arctic, Nomic, BGE-M3).
 * ⚡ **Auto-prefixing**: query/document handling baked in.
 * 🖥️ **CPU-friendly** but with **CUDA acceleration** if available.
-* 🐳 **Docker-ready** with `ghcr.io/knowusuboaky/unified-embeddings:latest`.
+* 🐳 **Docker-ready** with `ghcr.io/knowusuboaky/unified_embeddings:latest`.
 * 📦 **Preloading** of all registry models at startup for faster inference.
 
 ---
@@ -30,12 +30,12 @@ It handles model-specific quirks (prefixes, pooling, normalization) and works on
 ## 🚀 Quickstart (Local, CPU)
 
 ```bash
-git clone https://github.com/knowusuboaky/unified-embeddings.git
-cd unified-embeddings
+git clone https://github.com/knowusuboaky/unified_embeddings.git
+cd unified_embeddings
 
 python -m venv .venv && source .venv/bin/activate
 pip install --upgrade pip
-pip install -r unified-embeddings/requirements.txt
+pip install -r unified_embeddings/requirements.txt
 
 uvicorn embedding_models:app --host 0.0.0.0 --port 9005
 ```
@@ -49,19 +49,19 @@ Docs available at: [http://localhost:9005/**docs**](http://localhost:9005/__docs
 ### Pull from GHCR
 
 ```bash
-docker pull ghcr.io/knowusuboaky/unified-embeddings:latest
+docker pull ghcr.io/knowusuboaky/unified_embeddings:latest
 ```
 
 ### Run (CPU)
 
 ```bash
-docker run --rm -p 9005:9005 ghcr.io/knowusuboaky/unified-embeddings:latest
+docker run --rm -p 9005:9005 ghcr.io/knowusuboaky/unified_embeddings:latest
 ```
 
 ### Run (GPU, CUDA)
 
 ```bash
-docker run --rm -p 9005:9005 --gpus all ghcr.io/knowusuboaky/unified-embeddings:cuda
+docker run --rm -p 9005:9005 --gpus all ghcr.io/knowusuboaky/unified_embeddings:cuda
 ```
 
 ---
@@ -72,7 +72,7 @@ docker run --rm -p 9005:9005 --gpus all ghcr.io/knowusuboaky/unified-embeddings:
 version: "3.9"
 services:
   embeddings:
-    image: ghcr.io/knowusuboaky/unified-embeddings:latest
+    image: ghcr.io/knowusuboaky/unified_embeddings:latest
     environment:
       - TRANSFORMERS_CACHE=/root/.cache/huggingface
     ports:
@@ -127,8 +127,8 @@ Response:
 ## 📂 Repo Structure
 
 ```plaintext
-unified-embeddings/
-├── unified-embeddings/
+unified_embeddings/
+├── unified_embeddings/
 │   ├── requirements.txt     # Dependencies
 │   ├── embedding_models.py  # FastAPI app & registry
 ├── Dockerfile               # Container build
