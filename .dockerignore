@@ -1,0 +1,50 @@
+# Python bytecode / cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Git & editor junk
+.git/
+.gitignore
+.gitattributes
+*.swp
+*.swo
+*.orig
+.DS_Store
+.vscode/
+.idea/
+
+# Logs & temp
+*.log
+logs/
+tmp/
+*.tmp
+
+# Env & secrets (do not bake into images)
+.env
+*.env
+.env.*
+
+# Local caches / datasets
+.cache/
+.huggingface/
+huggingface/
+data/
+datasets/
+
+# Model weights (download at runtime via volume/cache)
+*.pt
+*.bin
+*.safetensors
+
+# Build artifacts
+dist/
+build/
+site-packages/
+pip-wheel-metadata/
