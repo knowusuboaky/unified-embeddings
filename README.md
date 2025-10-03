@@ -146,5 +146,3 @@ unified-embeddings/
 * For private Hugging Face models, set `HUGGING_FACE_HUB_TOKEN`.
 
 ---
-
-👉 Do you want me to also add a **“How to publish to GHCR”** section so contributors know how to build & push `ghcr.io/knowusuboaky/unified-embeddings:latest` automatically?
