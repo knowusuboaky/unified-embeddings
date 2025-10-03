@@ -54,4 +54,4 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=5 \
   CMD curl -fsS http://127.0.0.1:9005/healthz || exit 1
 
 # Start API
-CMD ["uvicorn", "embedding_models:app", "--host", "127.0.0.1", "--port", "9005"]
+CMD ["uvicorn", "embedding_models:app", "--host", "0.0.0.0", "--port", "9005"]
